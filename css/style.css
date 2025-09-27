@@ -1,62 +1,86 @@
-/* Estilos gerais para a página */
-body {
-    margin: 0; /* Remove a margem padrão do navegador */
-    font-family: Arial, sans-serif;
-    scroll-snap-type: y mandatory; /* Habilita a rolagem suave nas seções */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-/* Estilo para a barra de navegação */
-header {
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    scroll-snap-type: y mandatory;
+}
+
+.cabecalho {
     width: 100%;
-    position: fixed; /* Mantém a barra de navegação no topo */
+    position: fixed;
     top: 0;
-    z-index: 1000; /* Garante que a nav fique acima do resto do conteúdo */
-    background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo semi-transparente */
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 nav ul {
-    list-style: none; /* Remove os marcadores da lista */
-    padding: 0;
-    margin: 0;
-    display: flex; /* Alinha os itens lado a lado */
+    list-style: none;
+    display: flex;
     justify-content: center;
 }
 
-nav a {
+.nav-link {
     display: block;
     padding: 15px 20px;
     text-decoration: none;
     color: white;
     font-weight: bold;
-    transition: background-color 0.3s ease;
 }
 
-nav a:hover {
-    background-color: #555; /* Muda a cor de fundo ao passar o mouse */
+.nav-link:hover {
+    background-color: #555;
 }
 
-/* Estilo para cada seção */
 section {
-    height: 100vh; /* Faz com que cada seção ocupe a altura total da tela */
+    height: 100vh;
+    scroll-snap-align: start;
+    text-align: center;
+    padding: 40px 20px;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    scroll-snap-align: start; /* Faz a rolagem "grudar" no início de cada seção */
 }
 
-/* Estilo para a primeira seção (Início) */
+.secao-titulo {
+    font-size: 2.2rem;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.secao-subtitulo {
+    font-size: 1.1rem;
+    max-width: 700px;
+    line-height: 1.6;
+}
+
 #inicio {
-    background-color: green;
-    background-image: url('https://via.placeholder.com/1920x1080.png?text=Pessoas+de+Fundo');
     background-size: cover;
     background-position: center;
+    background-color: #00a86b;
     color: white;
+
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: flex-start;
+    text-align: center;
+    padding: 80px 50px;
 }
 
-/* Estilos para as outras seções */
-#sobre, #contato {
-    background-color: white;
-    color: #333; /* Cor do texto */
+.hero-titulo {
+    font-size: 4rem;
+    margin: 0;
+}
+
+.hero-subtitulo {
+    font-size: 1.6rem;
+    margin-top: auto;
+    margin-bottom: 120px;
 }
